@@ -1,0 +1,48 @@
+.title1{
+color: red;
+}
+.title2{
+
+background-color: lightyellow;
+
+}
+.title3{
+
+    border-left: 6px solid red;
+
+
+}
+.lorem1{
+    border-style: hidden;
+ 
+color: red;
+
+
+
+
+}
+.lorem2{
+
+    border-bottom: 6px solid red
+
+}
+.lorem3{
+    border-style: dashed;
+
+
+}
+.lorem4{
+
+    border-style: outset;
+    border-color: blue;
+    background-color: blue;
+
+
+}
+
+.azer{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+    
+    }
