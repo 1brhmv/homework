@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="stylejv.css">
+	<title>Student Info</title>
+	<style>
+		table, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+    
+	<h1>Student Info</h1>
+	<form id="student-form">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required><br><br>
+		<label for="surname">Surname:</label>
+		<input type="text" id="surname" name="surname" required><br><br>
+		<label for="age">Age:</label>
+		<input type="number" id="age" name="age" required><br><br>
+		<label for="gender">Gender:</label>
+		<input type="radio" id="male" name="gender" value="male">
+		<label for="male">Male</label>
+		<input type="radio" id="female" name="gender" value="female">
+		<label for="female">Female</label>
+		<input type="radio" id="other" name="gender" value="other">
+		<label for="other">Other</label><br><br>
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required><br><br>
+		<button type="submit" id="submit-btn">Submit</button>
+	</form>
+	<table id="student-table" style="display: none;">
+		<tr>
+			<th>Name</th>
+			<th>Surname</th>
+			<th>Age</th>
+			<th>Gender</th>
+			<th>Email</th>
+		</tr>
+		<tr>
+			<td id="name-cell"></td>
+			<td id="surname-cell"></td>
+			<td id="age-cell"></td>
+			<td id="gender-cell"></td>
+			<td id="email-cell"></td>
+		</tr>
+	</table>
+	<script>
+		const form = document.getElementById("student-form");
+		const table = document.getElementById("student-table");
+		const nameCell = document.getElementById("name-cell");
+		const surnameCell = document.getElementById("surname-cell");
+		const ageCell = document.getElementById("age-cell");
+		const genderCell = document.getElementById("gender-cell");
+		const emailCell = document.getElementById("email-cell");
+
+		form.addEventListener("submit", function(event) {
+			event.preventDefault();
+			nameCell.innerText = form.name.value;
+			surnameCell.innerText = form.surname.value;
+			ageCell.innerText = form.age.value;
+			genderCell.innerText = form.gender.value;
+			emailCell.innerText = form.email.value;
+			table.style.display = "table";
+		});
+	</script>
+</body>
+</html>
